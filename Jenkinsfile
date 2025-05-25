@@ -10,12 +10,12 @@ pipeline {
 
         stage('Install dependencies'){
             agent{
-                docker{
-                    image 'python:3'
+                docker {
+                    image 'node:18-alpine'
                 }
             }
             steps{
-                sh 'python3 --version'
+                sh 'node --version'
             }
         }
     }
